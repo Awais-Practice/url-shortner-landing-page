@@ -41,11 +41,21 @@
       <div id="contentContainer">
         <div class="col">
           <div class="col-collapseChart border">Collapse Chart</div>
-          <div class="col-chart">ddd</div>
+          <div
+            class="col-chart"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            Work in progress
+          </div>
         </div>
 
         <div class="col">
-          <div class="col-chart">ddd</div>
+          <div
+            class="col-chart"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            Work in progress
+          </div>
           <div class="col-collapseChart collapseChart-map">Collapse Map</div>
         </div>
       </div>
@@ -76,236 +86,238 @@
           </div>
           <div class="modal-body">
             <div class="content">
-              <div class="row" style="margin-bottom: 45px">
-                <div class="col-sm-12" style="position: relative">
-                  <div id="step1" class="contentStep active">
-                    <label for=""> Paste Long URL </label><br />
-                    <input type="text" />
-                    <div class="inputBtn">Create Short URL</div>
-                  </div>
+              <div id="newLinkEditorContent">
+                <div class="row" style="margin-bottom: 45px">
+                  <div class="col-sm-12" style="position: relative">
+                    <div id="step1" class="contentStep active">
+                      <label for=""> Paste Long URL </label><br />
+                      <input type="text" />
+                      <div class="inputBtn">Create Short URL</div>
+                    </div>
 
-                  <div id="step2" class="contentStep">
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <label for=""> Pick a custom Domain </label><br />
-                        <div class="dropdown">
-                          <input
-                            type="button"
-                            class="input btn btn-secondary dropdown-toggle"
-                            href="#"
-                            role="button"
-                            id="dropdownMenuLink"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          />
+                    <div id="step2" class="contentStep">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <label for=""> Pick a custom Domain </label><br />
+                          <div class="dropdown">
+                            <input
+                              type="button"
+                              class="input btn btn-secondary dropdown-toggle"
+                              href="#"
+                              role="button"
+                              id="dropdownMenuLink"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            />
 
-                          <div
-                            class="dropdown-menu domainSelector"
-                            aria-labelledby="dropdownMenuLink"
-                          >
-                            <h4>Select a custom domain</h4>
-                            <div class="domainSelections">
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('amzn.how')"
-                              >
-                                amzn.how
-                              </div>
+                            <div
+                              class="dropdown-menu domainSelector"
+                              aria-labelledby="dropdownMenuLink"
+                            >
+                              <h4>Select a custom domain</h4>
+                              <div class="domainSelections">
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('amzn.how')"
+                                >
+                                  amzn.how
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('ytube.page')"
-                              >
-                                ytube.page
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('ytube.page')"
+                                >
+                                  ytube.page
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('twttr.site')"
-                              >
-                                twttr.site
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('twttr.site')"
+                                >
+                                  twttr.site
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('ebay.party')"
-                              >
-                                ebay.party
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('ebay.party')"
+                                >
+                                  ebay.party
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('yelp.pw')"
-                              >
-                                yelp.pw
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('yelp.pw')"
+                                >
+                                  yelp.pw
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('inkd.dev')"
-                              >
-                                inkd.dev
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('inkd.dev')"
+                                >
+                                  inkd.dev
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('insta.blue')"
-                              >
-                                insta.blue
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('insta.blue')"
+                                >
+                                  insta.blue
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('etsy.one')"
-                              >
-                                etsy.one
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('etsy.one')"
+                                >
+                                  etsy.one
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('pintrest.blue')"
-                              >
-                                pintrest.blue
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('pintrest.blue')"
+                                >
+                                  pintrest.blue
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('wlmart.in')"
-                              >
-                                wlmart.in
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('wlmart.in')"
+                                >
+                                  wlmart.in
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('reddit.fyi')"
-                              >
-                                reddit.fyi
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('reddit.fyi')"
+                                >
+                                  reddit.fyi
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('wiki.army')"
-                              >
-                                wiki.army
-                              </div>
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('wiki.army')"
+                                >
+                                  wiki.army
+                                </div>
 
-                              <div
-                                class="domainSelection"
-                                onclick="selectCustomDomain('claim.run')"
-                              >
-                                claim.run
+                                <div
+                                  class="domainSelection"
+                                  onclick="selectCustomDomain('claim.run')"
+                                >
+                                  claim.run
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div class="col-sm-6">
-                        <label for=""> Input Desired Keyword </label><br />
-                        <input type="text" class="input" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div id="step3" class="contentStep">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <label for=""> UTM Source </label><br />
-                        <input type="text" placeholder="Enter" />
+                        <div class="col-sm-6">
+                          <label for=""> Input Desired Keyword </label><br />
+                          <input type="text" class="input" />
+                        </div>
                       </div>
                     </div>
 
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <label for=""> UTM Medium </label><br />
-                        <input type="text" placeholder="Enter" />
+                    <div id="step3" class="contentStep">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <label for=""> UTM Source </label><br />
+                          <input type="text" placeholder="Enter" />
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <label for=""> UTM Campaign </label><br />
-                        <input type="text" placeholder="Enter" />
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <label for=""> UTM Medium </label><br />
+                          <input type="text" placeholder="Enter" />
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <label for=""> UTM Term </label><br />
-                        <input type="text" placeholder="Enter" />
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <label for=""> UTM Campaign </label><br />
+                          <input type="text" placeholder="Enter" />
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <label for=""> UTM Content </label><br />
-                        <input type="text" placeholder="Enter" />
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <label for=""> UTM Term </label><br />
+                          <input type="text" placeholder="Enter" />
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <label for=""> UTM Content </label><br />
+                          <input type="text" placeholder="Enter" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Next Previous buttons -->
-              <div style="display: flex; justify-content: center">
-                <button
-                  id="newLinkBackButton"
-                  onclick="newLinkPreviousStep()"
-                  type="button"
-                  class="btn btn-default"
-                  style="margin-right: 20px"
-                >
-                  <div style="display: inline-block; margin-right: 10px">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-left"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
-                      />
-                    </svg>
-                  </div>
+                <!-- Next Previous buttons -->
+                <div style="display: flex; justify-content: center">
+                  <button
+                    id="newLinkBackButton"
+                    onclick="newLinkPreviousStep()"
+                    type="button"
+                    class="btn btn-default"
+                    style="margin-right: 20px"
+                  >
+                    <div style="display: inline-block; margin-right: 10px">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-arrow-left"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                        />
+                      </svg>
+                    </div>
 
-                  Go Back
-                </button>
+                    Go Back
+                  </button>
 
-                <button
-                  id="newLinkNextButton"
-                  onclick="newLinkNextStep()"
-                  type="button"
-                  class="btn btn-primary"
-                >
-                  Next Step
-                  <div style="display: inline-block; margin-left: 10px">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                      />
-                    </svg>
-                  </div>
-                </button>
+                  <button
+                    id="newLinkNextButton"
+                    onclick="newLinkNextStep()"
+                    type="button"
+                    class="btn btn-primary"
+                  >
+                    Next Step
+                    <div style="display: inline-block; margin-left: 10px">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-arrow-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                        />
+                      </svg>
+                    </div>
+                  </button>
 
-                <button
-                  id="newLinkSubmitButton"
-                  onclick="submitNewLink()"
-                  type="button"
-                  class="btn btn-primary"
-                >
-                  Create Short Url
-                </button>
+                  <button
+                    id="newLinkSubmitButton"
+                    onclick="submitNewLink()"
+                    type="button"
+                    class="btn btn-primary"
+                  >
+                    Create Short Url
+                  </button>
+                </div>
               </div>
               <!-- Stepper -->
               <div class="modalStepper">
@@ -338,6 +350,21 @@
                   >
                     <div class="circle">3</div>
                     <div class="label">Done</div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="linkCreatedResult">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label for=""> Here's your link</label><br />
+                    <input
+                      type="text"
+                      class="input"
+                      readonly
+                      placeholder="Enter"
+                      value="ytube.page/ChartGraph"
+                    />
                   </div>
                 </div>
               </div>
@@ -455,6 +482,13 @@
 
       function resetNewLinkDialog() {
         openNewLinkContentStep(1);
+        document.querySelector("#newLinkEditorContent").style.display = "block";
+        document.querySelector("#linkCreatedResult").style.display = "none";
+      }
+
+      function submitNewLink() {
+        document.querySelector("#newLinkEditorContent").style.display = "none";
+        document.querySelector("#linkCreatedResult").style.display = "block";
       }
     </script>
   </body>
