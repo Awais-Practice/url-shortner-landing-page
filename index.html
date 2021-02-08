@@ -18,7 +18,11 @@
       <!-- Header Container code start here -->
       <div class="header">
         <div class="buttonBox">
-          <button class="linkBtn">
+          <button
+            class="linkBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
             + Create New Link <img src="./assets/images/share-link.svg" alt="" /
             class="ml-10">
           </button>
@@ -47,16 +51,9 @@
     </div>
 
     <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Launch demo modal
-    </button>
 
     <!-- Modal -->
+
     <div
       class="modal fade"
       id="exampleModal"
@@ -67,7 +64,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Create New Link</h5>
             <button
               type="button"
               class="btn-close"
@@ -75,8 +72,19 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
+          <div class="modal-body">
+            <div class="content">
+              <div class="row">
+                <div class="col-sm-12">
+                  <label for=""> Paste Long Url </label><br />
+                  <input type="text" />
+                  <div class="inputBtn">Create short</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="modal-footer">
             <button
               type="button"
               class="btn btn-secondary"
@@ -85,7 +93,7 @@
               Close
             </button>
             <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -80,4 +80,48 @@ body {
       }
     }
   }
+
+  #exampleModal {
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+          h5 {
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+      .modal-body {
+        margin: auto;
+        width: 100%;
+        .content {
+          input {
+            width: 100%;
+            border: 0px solid;
+            outline: none;
+            height: 45px;
+            background-color: #cdcdcd;
+            border-radius: 30px;
+            position: relative;
+            padding-left: 10px;
+          }
+          .inputBtn {
+            width: 119px;
+            background-color: gray;
+            height: 40px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 42px;
+            right: 19px;
+            cursor: pointer;
+            bottom: 0;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
 }

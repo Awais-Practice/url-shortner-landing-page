@@ -74,3 +74,36 @@ body #mainContainer #contentContainer .col .col-collapseChart {
 body #mainContainer #contentContainer .col .collapseChart-map {
   border-radius: 0px 15px 15px 0px !important;
 }
+body #exampleModal .modal-dialog .modal-content .modal-header h5 {
+  text-align: center;
+  width: 100%;
+}
+body #exampleModal .modal-dialog .modal-body {
+  margin: auto;
+  width: 100%;
+}
+body #exampleModal .modal-dialog .modal-body .content input {
+  width: 100%;
+  border: 0px solid;
+  outline: none;
+  height: 45px;
+  background-color: #cdcdcd;
+  border-radius: 30px;
+  position: relative;
+  padding-left: 10px;
+}
+body #exampleModal .modal-dialog .modal-body .content .inputBtn {
+  width: 119px;
+  background-color: gray;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 42px;
+  right: 19px;
+  cursor: pointer;
+  bottom: 0;
+  position: absolute;
+}
