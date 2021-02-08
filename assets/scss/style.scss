@@ -1,13 +1,20 @@
 $primaryColor: #3271da;
 
-.btn.btn-primary {
-  background-color: $primaryColor;
-  border-radius: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+.btn {
+  border-radius: 30px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
   display: flex;
   align-items: center;
   height: 50px;
+  &.btn-primary {
+    background-color: $primaryColor;
+  }
+  &.btn-default {
+    background-color: #fff;
+    border: 2px solid #8f8f8f;
+    color: #8f8f8f;
+  }
 }
 body {
   margin: 0px;
@@ -93,6 +100,7 @@ body {
   }
 
   #exampleModal {
+    backdrop-filter: blur(10px);
     .modal-dialog {
       max-width: 800px;
       .modal-content {
@@ -125,6 +133,18 @@ body {
           padding-top: 0px;
           color: #585454;
           min-height: 500px;
+
+          .contentStep {
+            display: none;
+
+            &.active {
+              display: block;
+            }
+          }
+
+          #newLinkBackButton {
+            display: none;
+          }
 
           label {
             padding-left: 20px;
@@ -177,10 +197,22 @@ body {
             right: 0;
             left: 20px;
             top: 20px;
-            height: 2px;
+            height: 3px;
             background-color: #eeeeee;
             padding-left: inherit;
             padding-right: inherit;
+
+            .stepperLineProgress {
+              transition: width 0.4s ease-in-out;
+              width: 0%;
+              height: 100%;
+              background: rgb(50, 113, 218);
+              background: linear-gradient(
+                117deg,
+                rgba(50, 113, 218, 1) 0%,
+                rgba(102, 207, 163, 1) 87%
+              );
+            }
           }
           .modalStep {
             display: flex;

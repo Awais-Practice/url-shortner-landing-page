@@ -1,11 +1,18 @@
-.btn.btn-primary {
-  background-color: #3271da;
-  border-radius: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+.btn {
+  border-radius: 30px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
   display: flex;
   align-items: center;
   height: 50px;
+}
+.btn.btn-primary {
+  background-color: #3271da;
+}
+.btn.btn-default {
+  background-color: #fff;
+  border: 2px solid #8f8f8f;
+  color: #8f8f8f;
 }
 
 body {
@@ -84,6 +91,9 @@ body #mainContainer #contentContainer .col .col-collapseChart {
 body #mainContainer #contentContainer .col .collapseChart-map {
   border-radius: 0px 15px 15px 0px !important;
 }
+body #exampleModal {
+  backdrop-filter: blur(10px);
+}
 body #exampleModal .modal-dialog {
   max-width: 800px;
 }
@@ -117,6 +127,15 @@ body #exampleModal .modal-dialog .modal-body .content {
   padding-top: 0px;
   color: #585454;
   min-height: 500px;
+}
+body #exampleModal .modal-dialog .modal-body .content .contentStep {
+  display: none;
+}
+body #exampleModal .modal-dialog .modal-body .content .contentStep.active {
+  display: block;
+}
+body #exampleModal .modal-dialog .modal-body .content #newLinkBackButton {
+  display: none;
 }
 body #exampleModal .modal-dialog .modal-body .content label {
   padding-left: 20px;
@@ -168,10 +187,17 @@ body #exampleModal .modal-dialog .modalStepper .modalStepperContent .stepperLine
   right: 0;
   left: 20px;
   top: 20px;
-  height: 2px;
+  height: 3px;
   background-color: #eeeeee;
   padding-left: inherit;
   padding-right: inherit;
+}
+body #exampleModal .modal-dialog .modalStepper .modalStepperContent .stepperLine .stepperLineProgress {
+  transition: width 0.4s ease-in-out;
+  width: 0%;
+  height: 100%;
+  background: #3271da;
+  background: linear-gradient(117deg, #3271da 0%, #66cfa3 87%);
 }
 body #exampleModal .modal-dialog .modalStepper .modalStepperContent .modalStep {
   display: flex;

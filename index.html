@@ -71,23 +71,65 @@
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
+              onclick="resetNewLinkDialog()"
             ></button>
           </div>
           <div class="modal-body">
             <div class="content">
               <div class="row" style="margin-bottom: 45px">
                 <div class="col-sm-12" style="position: relative">
-                  <label for=""> Paste Long URL </label><br />
-                  <input type="text" />
-                  <div class="inputBtn">Create Short URL</div>
+                  <div id="step1" class="contentStep active">
+                    <label for=""> Paste Long URL </label><br />
+                    <input type="text" />
+                    <div class="inputBtn">Create Short URL</div>
+                  </div>
+
+                  <div id="step2" class="contentStep">
+                    <label for=""> Step 2 </label><br />
+                    <input type="text" />
+                    <div class="inputBtn">Create Short URL</div>
+                  </div>
+
+                  <div id="step3" class="contentStep">
+                    <label for=""> Step 3 </label><br />
+                    <input type="text" />
+                    <div class="inputBtn">Create Short URL</div>
+                  </div>
                 </div>
               </div>
 
+              <!-- Next Previous buttons -->
               <div style="display: flex; justify-content: center">
                 <button
+                  id="newLinkBackButton"
+                  onclick="newLinkPreviousStep()"
+                  type="button"
+                  class="btn btn-default"
+                  style="margin-right: 20px"
+                >
+                  <div style="display: inline-block; margin-right: 10px">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-left"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                      />
+                    </svg>
+                  </div>
+
+                  Go Back
+                </button>
+
+                <button
+                  onclick="newLinkNextStep()"
                   type="button"
                   class="btn btn-primary"
-                  data-bs-dismiss="modal"
                 >
                   Next Step
                   <div style="display: inline-block; margin-left: 10px">
@@ -107,21 +149,35 @@
                   </div>
                 </button>
               </div>
-
+              <!-- Stepper -->
               <div class="modalStepper">
                 <div class="modalStepperContent">
-                  <div class="stepperLine"></div>
-                  <div class="modalStep active">
+                  <div class="stepperLine">
+                    <div class="stepperLineProgress"></div>
+                  </div>
+                  <div
+                    class="modalStep active"
+                    id="modalStep1"
+                    onclick="openNewLinkContentStep(1)"
+                  >
                     <div class="circle">1</div>
                     <div class="label">Paste Link</div>
                   </div>
 
-                  <div class="modalStep">
+                  <div
+                    class="modalStep"
+                    id="modalStep2"
+                    onclick="openNewLinkContentStep(2)"
+                  >
                     <div class="circle">2</div>
                     <div class="label">Select Domain</div>
                   </div>
 
-                  <div class="modalStep">
+                  <div
+                    class="modalStep"
+                    id="modalStep3"
+                    onclick="openNewLinkContentStep(3)"
+                  >
                     <div class="circle">3</div>
                     <div class="label">Done</div>
                   </div>
@@ -143,10 +199,72 @@
         </div>
       </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      let newLinkStep = 1;
+
+      function newLinkNextStep() {
+        // limit steps upto 3 max
+        if (newLinkStep < 3) {
+          newLinkStep++;
+          openNewLinkContentStep(newLinkStep);
+        }
+      }
+
+      function openNewLinkStepperStep(pNewLinkStep) {
+        let steps = document.querySelectorAll(".modalStep");
+        steps.forEach((step, index) => {
+          if (index + 1 > pNewLinkStep) step.classList.remove("active");
+          else step.classList.add("active");
+        });
+
+        if (pNewLinkStep === 1)
+          document.querySelector(".stepperLineProgress").style.width = "0";
+        else if (pNewLinkStep === 2)
+          document.querySelector(".stepperLineProgress").style.width = "50%";
+        else if (pNewLinkStep === 3)
+          document.querySelector(".stepperLineProgress").style.width = "100%";
+      }
+
+      function openNewLinkContentStep(pNewLinkStep) {
+        let steps = document.querySelectorAll(".contentStep");
+        steps.forEach((step) => {
+          step.classList.remove("active");
+        });
+
+        document.querySelector("#step" + pNewLinkStep).classList.add("active");
+
+        if (pNewLinkStep === 2) showNewLinkBackButton();
+        else hideNewLinkBackButton();
+
+        newLinkStep = pNewLinkStep;
+        openNewLinkStepperStep(newLinkStep);
+      }
+
+      function showNewLinkBackButton() {
+        document.querySelector("#newLinkBackButton").style.display = "block";
+      }
+      function hideNewLinkBackButton() {
+        document.querySelector("#newLinkBackButton").style.display = "none";
+      }
+
+      function newLinkPreviousStep() {
+        // limit prev steps upto 1 min
+        if (newLinkStep > 1) {
+          newLinkStep--;
+          openNewLinkContentStep(newLinkStep);
+        }
+      }
+
+      function resetNewLinkDialog() {
+        openNewLinkContentStep(1);
+      }
+    </script>
   </body>
 </html>
