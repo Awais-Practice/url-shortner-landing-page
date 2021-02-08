@@ -85,15 +85,163 @@
                   </div>
 
                   <div id="step2" class="contentStep">
-                    <label for=""> Step 2 </label><br />
-                    <input type="text" />
-                    <div class="inputBtn">Create Short URL</div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for=""> Pick a custom Domain </label><br />
+                        <div class="dropdown">
+                          <input
+                            type="button"
+                            class="input btn btn-secondary dropdown-toggle"
+                            href="#"
+                            role="button"
+                            id="dropdownMenuLink"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          />
+
+                          <div
+                            class="dropdown-menu domainSelector"
+                            aria-labelledby="dropdownMenuLink"
+                          >
+                            <h4>Select a custom domain</h4>
+                            <div class="domainSelections">
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('amzn.how')"
+                              >
+                                amzn.how
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('ytube.page')"
+                              >
+                                ytube.page
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('twttr.site')"
+                              >
+                                twttr.site
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('ebay.party')"
+                              >
+                                ebay.party
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('yelp.pw')"
+                              >
+                                yelp.pw
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('inkd.dev')"
+                              >
+                                inkd.dev
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('insta.blue')"
+                              >
+                                insta.blue
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('etsy.one')"
+                              >
+                                etsy.one
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('pintrest.blue')"
+                              >
+                                pintrest.blue
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('wlmart.in')"
+                              >
+                                wlmart.in
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('reddit.fyi')"
+                              >
+                                reddit.fyi
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('wiki.army')"
+                              >
+                                wiki.army
+                              </div>
+
+                              <div
+                                class="domainSelection"
+                                onclick="selectCustomDomain('claim.run')"
+                              >
+                                claim.run
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <label for=""> Input Desired Keyword </label><br />
+                        <input type="text" class="input" />
+                      </div>
+                    </div>
                   </div>
 
                   <div id="step3" class="contentStep">
-                    <label for=""> Step 3 </label><br />
-                    <input type="text" />
-                    <div class="inputBtn">Create Short URL</div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label for=""> UTM Source </label><br />
+                        <input type="text" placeholder="Enter" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label for=""> UTM Medium </label><br />
+                        <input type="text" placeholder="Enter" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label for=""> UTM Campaign </label><br />
+                        <input type="text" placeholder="Enter" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label for=""> UTM Term </label><br />
+                        <input type="text" placeholder="Enter" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label for=""> UTM Content </label><br />
+                        <input type="text" placeholder="Enter" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -127,6 +275,7 @@
                 </button>
 
                 <button
+                  id="newLinkNextButton"
                   onclick="newLinkNextStep()"
                   type="button"
                   class="btn btn-primary"
@@ -147,6 +296,15 @@
                       />
                     </svg>
                   </div>
+                </button>
+
+                <button
+                  id="newLinkSubmitButton"
+                  onclick="submitNewLink()"
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Create Short Url
                 </button>
               </div>
               <!-- Stepper -->
@@ -201,13 +359,24 @@
     </div>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
       crossorigin="anonymous"
     ></script>
 
     <script>
       let newLinkStep = 1;
+      let selectedCustomDomain = "amzon.how";
+
+      function selectCustomDomain(domain) {
+        document.querySelector("#dropdownMenuLink").value = domain;
+        selectedCustomDomain = domain;
+      }
 
       function newLinkNextStep() {
         // limit steps upto 3 max
@@ -243,8 +412,23 @@
         if (pNewLinkStep === 2) showNewLinkBackButton();
         else hideNewLinkBackButton();
 
+        if (pNewLinkStep === 3) {
+          showNewLinkSubmitButton();
+          hideNewLinkNextButton();
+        } else {
+          showNewLinkNextButton();
+          hideNewLinkSubmitButton();
+        }
+
         newLinkStep = pNewLinkStep;
         openNewLinkStepperStep(newLinkStep);
+      }
+
+      function showNewLinkSubmitButton() {
+        document.querySelector("#newLinkSubmitButton").style.display = "block";
+      }
+      function hideNewLinkSubmitButton() {
+        document.querySelector("#newLinkSubmitButton").style.display = "none";
       }
 
       function showNewLinkBackButton() {
@@ -252,6 +436,13 @@
       }
       function hideNewLinkBackButton() {
         document.querySelector("#newLinkBackButton").style.display = "none";
+      }
+
+      function showNewLinkNextButton() {
+        document.querySelector("#newLinkNextButton").style.display = "block";
+      }
+      function hideNewLinkNextButton() {
+        document.querySelector("#newLinkNextButton").style.display = "none";
       }
 
       function newLinkPreviousStep() {

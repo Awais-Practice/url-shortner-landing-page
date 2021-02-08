@@ -68,6 +68,7 @@ body {
       display: flex;
       justify-content: center;
       flex-grow: 1;
+      padding: 0px 20px;
 
       .col {
         display: flex;
@@ -94,6 +95,36 @@ body {
         }
         .collapseChart-map {
           border-radius: 0px 15px 15px 0px !important;
+        }
+      }
+    }
+  }
+
+  .domainSelector {
+    right: auto !important;
+    width: 200%;
+    min-height: 100px;
+    margin-top: 10px !important;
+    padding: 20px;
+    h4 {
+      font-size: 12px;
+      color: #a1a1a1;
+    }
+    .domainSelections {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: start;
+      .domainSelection {
+        color: #a4a4a4;
+        background-color: #f5f5f5;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin: 5px;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          background-color: #dedede;
         }
       }
     }
@@ -133,16 +164,23 @@ body {
           padding-top: 0px;
           color: #585454;
           min-height: 500px;
+          padding-bottom: 200px;
 
           .contentStep {
             display: none;
-
+            #dropdownMenuLink {
+              color: #000;
+              text-align: left;
+            }
             &.active {
               display: block;
             }
           }
 
           #newLinkBackButton {
+            display: none;
+          }
+          #newLinkSubmitButton {
             display: none;
           }
 
@@ -158,8 +196,19 @@ body {
             background-color: #f5f5f5;
             border-radius: 30px;
             position: relative;
-            padding-left: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-shadow: none !important;
+            color: $primaryColor;
+            margin-bottom: 20px;
+
+            &.input {
+              border: 2px solid $primaryColor;
+              background-color: #fff;
+              color: $primaryColor !important;
+            }
           }
+
           .inputBtn {
             background-color: #cbcbcb;
             height: 36px;

@@ -63,6 +63,7 @@ body #mainContainer #contentContainer {
   display: flex;
   justify-content: center;
   flex-grow: 1;
+  padding: 0px 20px;
 }
 body #mainContainer #contentContainer .col {
   display: flex;
@@ -90,6 +91,34 @@ body #mainContainer #contentContainer .col .col-collapseChart {
 }
 body #mainContainer #contentContainer .col .collapseChart-map {
   border-radius: 0px 15px 15px 0px !important;
+}
+body .domainSelector {
+  right: auto !important;
+  width: 200%;
+  min-height: 100px;
+  margin-top: 10px !important;
+  padding: 20px;
+}
+body .domainSelector h4 {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+body .domainSelector .domainSelections {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: start;
+}
+body .domainSelector .domainSelections .domainSelection {
+  color: #a4a4a4;
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+body .domainSelector .domainSelections .domainSelection:hover {
+  background-color: #dedede;
 }
 body #exampleModal {
   backdrop-filter: blur(10px);
@@ -127,14 +156,22 @@ body #exampleModal .modal-dialog .modal-body .content {
   padding-top: 0px;
   color: #585454;
   min-height: 500px;
+  padding-bottom: 200px;
 }
 body #exampleModal .modal-dialog .modal-body .content .contentStep {
   display: none;
+}
+body #exampleModal .modal-dialog .modal-body .content .contentStep #dropdownMenuLink {
+  color: #000;
+  text-align: left;
 }
 body #exampleModal .modal-dialog .modal-body .content .contentStep.active {
   display: block;
 }
 body #exampleModal .modal-dialog .modal-body .content #newLinkBackButton {
+  display: none;
+}
+body #exampleModal .modal-dialog .modal-body .content #newLinkSubmitButton {
   display: none;
 }
 body #exampleModal .modal-dialog .modal-body .content label {
@@ -149,7 +186,16 @@ body #exampleModal .modal-dialog .modal-body .content input {
   background-color: #f5f5f5;
   border-radius: 30px;
   position: relative;
-  padding-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: none !important;
+  color: #3271da;
+  margin-bottom: 20px;
+}
+body #exampleModal .modal-dialog .modal-body .content input.input {
+  border: 2px solid #3271da;
+  background-color: #fff;
+  color: #3271da !important;
 }
 body #exampleModal .modal-dialog .modal-body .content .inputBtn {
   background-color: #cbcbcb;
