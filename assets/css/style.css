@@ -151,5 +151,49 @@ body #exampleModal .modal-dialog .modal-body .content .inputBtn {
   line-height: 0;
 }
 body #exampleModal .modal-dialog .modalStepper {
-  border: 1px solid;
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+  right: 0px;
+  padding-left: inherit;
+  padding-right: inherit;
+}
+body #exampleModal .modal-dialog .modalStepper .modalStepperContent {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+body #exampleModal .modal-dialog .modalStepper .modalStepperContent .stepperLine {
+  position: absolute;
+  right: 0;
+  left: 20px;
+  top: 20px;
+  height: 2px;
+  background-color: #eeeeee;
+  padding-left: inherit;
+  padding-right: inherit;
+}
+body #exampleModal .modal-dialog .modalStepper .modalStepperContent .modalStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #9f9f9f;
+}
+body #exampleModal .modal-dialog .modalStepper .modalStepperContent .modalStep .circle {
+  background: #eeeeee;
+  color: #a1a1a1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+body #exampleModal .modal-dialog .modalStepper .modalStepperContent .modalStep:hover .circle, body #exampleModal .modal-dialog .modalStepper .modalStepperContent .modalStep.active .circle {
+  background: #3271da;
+  background: linear-gradient(117deg, #3271da 0%, #66cfa3 87%);
+  color: #fff;
 }

@@ -161,7 +161,60 @@ body {
         }
       }
       .modalStepper {
-        border: 1px solid;
+        position: absolute;
+        bottom: 40px;
+        left: 0px;
+        right: 0px;
+        padding-left: inherit;
+        padding-right: inherit;
+        .modalStepperContent {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+
+          .stepperLine {
+            position: absolute;
+            right: 0;
+            left: 20px;
+            top: 20px;
+            height: 2px;
+            background-color: #eeeeee;
+            padding-left: inherit;
+            padding-right: inherit;
+          }
+          .modalStep {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #9f9f9f;
+            .circle {
+              background: #eeeeee;
+              color: #a1a1a1;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              margin-bottom: 7px;
+              cursor: pointer;
+            }
+
+            &:hover,
+            &.active {
+              .circle {
+                background: rgb(50, 113, 218);
+                background: linear-gradient(
+                  117deg,
+                  rgba(50, 113, 218, 1) 0%,
+                  rgba(102, 207, 163, 1) 87%
+                );
+                color: #fff;
+              }
+            }
+          }
+        }
       }
     }
   }
