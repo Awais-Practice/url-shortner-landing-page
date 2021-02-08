@@ -11,6 +11,7 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+
     <title>Document</title>
   </head>
   <body>
@@ -74,11 +75,56 @@
           </div>
           <div class="modal-body">
             <div class="content">
-              <div class="row">
-                <div class="col-sm-12">
-                  <label for=""> Paste Long Url </label><br />
+              <div class="row" style="margin-bottom: 45px">
+                <div class="col-sm-12" style="position: relative">
+                  <label for=""> Paste Long URL </label><br />
                   <input type="text" />
-                  <div class="inputBtn">Create short</div>
+                  <div class="inputBtn">Create Short URL</div>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Next Step
+                  <div style="display: inline-block; margin-left: 10px">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="modalStepper">
+                <div class="modalStepperContent">
+                  <div class="stepperLine"></div>
+                  <div class="modalStep">
+                    <div class="circle">1</div>
+                    <div class="label">Paste Link</div>
+                  </div>
+
+                  <div class="modalStep">
+                    <div class="circle">2</div>
+                    <div class="label">Select Domain</div>
+                  </div>
+
+                  <div class="modalStep">
+                    <div class="circle">3</div>
+                    <div class="label">Done</div>
+                  </div>
                 </div>
               </div>
             </div>
