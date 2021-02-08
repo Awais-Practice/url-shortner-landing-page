@@ -63,9 +63,12 @@ body {
           height: 100px;
           align-self: center;
           background-color: #ffff;
-          width: 100px;
+          width: 40px;
           border-radius: 15px 0px 0px 15px;
-          transform: rotate(90deg);
+          writing-mode: vertical-rl;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         .collapseChart-map {
           border-radius: 0px 15px 15px 0px !important;
