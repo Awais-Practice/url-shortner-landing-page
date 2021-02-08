@@ -39,3 +39,31 @@ body #mainContainer .header .buttonBox button .settingBtn {
 body #mainContainer .header .buttonBox button .settingBtn .settingImg {
   margin-left: 0px;
 }
+body #mainContainer #contentContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+body #mainContainer #contentContainer .col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 48%;
+  height: 500px;
+}
+body #mainContainer #contentContainer .col .col-chart {
+  background-color: #ffff;
+  flex-grow: 1;
+  border-radius: 15px;
+}
+body #mainContainer #contentContainer .col .col-collapseChart {
+  height: 100px;
+  align-self: center;
+  background-color: #ffff;
+  width: 100px;
+  border-radius: 15px 0px 0px 15px;
+  transform: rotate(90deg);
+}
+body #mainContainer #contentContainer .col .collapseChart-map {
+  border-radius: 0px 15px 15px 0px !important;
+}

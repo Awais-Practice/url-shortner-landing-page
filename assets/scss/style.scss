@@ -42,5 +42,35 @@ body {
         }
       }
     }
+
+    #contentContainer {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+
+      .col {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 48%;
+        height: 500px;
+        .col-chart {
+          background-color: #ffff;
+          flex-grow: 1;
+          border-radius: 15px;
+        }
+        .col-collapseChart {
+          height: 100px;
+          align-self: center;
+          background-color: #ffff;
+          width: 100px;
+          border-radius: 15px 0px 0px 15px;
+          transform: rotate(90deg);
+        }
+        .collapseChart-map {
+          border-radius: 0px 15px 15px 0px !important;
+        }
+      }
+    }
   }
 }
