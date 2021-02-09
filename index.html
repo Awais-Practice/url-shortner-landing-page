@@ -51,22 +51,30 @@
 
       <!-- Content Container code start here  -->
       <div id="contentContainer">
-        <div class="col" id="chartColumn">
-          <div class="col-collapseChart border">Collapse Chart</div>
-          <div class="col-chart" style="padding: 20px; padding-bottom:100px">
-            <h4 style="margin-left: 30px; margin-top: 10px">
-              Line Chart Title Here
-            </h4>
-            <canvas id="canvas" style="width:100%; "></canvas>
+     
+
+        <div class="widget">
+
+          <div class="collapseButton" onclick="toggleChart()" id="collapseChartButton">Collapse Chart</div>
+          <div class="collapseButton collapseChart-map" onclick="toggleMap()" id="collapseMapButton">Collapse Map</div>
+          <div class="col" id="chartColumn">
+          
+            <div class="col-chart" style="padding: 20px; padding-bottom:100px">
+              <h4 style="margin-left: 30px; margin-top: 10px">
+                Line Chart Title Here
+              </h4>
+              <canvas id="canvas" style="width:100%; "></canvas>
+            </div>
+          </div>
+  
+          <div class="col" id="mapColumn">
+            <div class="col-chart" style="padding: 20px">
+              <div id="map" style="width: 100%; height: 100%"></div>
+            </div>
+           
           </div>
         </div>
 
-        <div class="col" id="mapColumn">
-          <div class="col-chart" style="padding: 20px">
-            <div id="map" style="width: 100%; height: 100%"></div>
-          </div>
-          <div class="col-collapseChart collapseChart-map">Collapse Map</div>
-        </div>
       </div>
     </div>
 
@@ -559,10 +567,23 @@
       drawMap();
 
       function toggleMap() {
+        
+        
         document.querySelector("#mapColumn").style.display =
           document.querySelector("#mapColumn").style.display === "none"
             ? "flex"
             : "none";
+
+            if( document.querySelector("#mapColumn").style.display==='none'){
+              document.querySelector('#collapseChartButton').style.display = 'none';
+              document.querySelector('#collapseMapButton').innerHTML='Uncollapse Map';
+              
+            } 
+            else {
+              document.querySelector('#collapseChartButton').style.display = 'flex';
+              document.querySelector('#collapseMapButton').innerHTML='Collapse Map';
+             
+            }
 
       }
 
@@ -573,6 +594,15 @@
             ? "flex"
             : "none";
             map.invalidateSize();
+
+            if( document.querySelector("#chartColumn").style.display==='none'){
+              document.querySelector('#collapseMapButton').style.display = 'none';
+              document.querySelector('#collapseChartButton').innerHTML='UnCollapse Map';
+            } else {
+              document.querySelector('#collapseMapButton').style.display = 'flex';
+              document.querySelector('#collapseChartButton').innerHTML='Collapse Map';
+
+            }
         
       }
     </script>

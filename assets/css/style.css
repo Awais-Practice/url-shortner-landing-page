@@ -20,8 +20,9 @@ body {
 }
 body #mainContainer {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../images/Dashboard.svg");
+  padding-bottom: 100px;
   background-size: cover;
   background-position: right bottom;
   display: flex;
@@ -60,24 +61,17 @@ body #mainContainer .header .buttonBox button .settingBtn .settingImg {
 }
 body #mainContainer #contentContainer {
   margin-top: 30px;
+  padding: 0px 40px;
+  flex-grow: 1;
+  display: flex;
+}
+body #mainContainer #contentContainer .widget {
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  padding: 0px 20px;
+  position: relative;
 }
-body #mainContainer #contentContainer .col {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 48%;
-  max-height: 700px;
-}
-body #mainContainer #contentContainer .col .col-chart {
-  background-color: #ffff;
-  flex-grow: 1;
-  border-radius: 15px;
-}
-body #mainContainer #contentContainer .col .col-collapseChart {
+body #mainContainer #contentContainer .widget .collapseButton {
   height: 110px;
   align-self: center;
   background-color: #ffff;
@@ -88,9 +82,24 @@ body #mainContainer #contentContainer .col .col-collapseChart {
   align-items: center;
   justify-content: center;
   font-size: 13px;
+  position: absolute;
+  left: -30px;
 }
-body #mainContainer #contentContainer .col .collapseChart-map {
+body #mainContainer #contentContainer .widget .collapseButton.collapseChart-map {
   border-radius: 0px 15px 15px 0px !important;
+  right: -30px;
+  left: unset;
+}
+body #mainContainer #contentContainer .widget .col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 48%;
+}
+body #mainContainer #contentContainer .widget .col .col-chart {
+  background-color: #ffff;
+  flex-grow: 1;
+  border-radius: 15px;
 }
 body .domainSelector {
   right: auto !important;
