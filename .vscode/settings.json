@@ -1,5 +1,6 @@
 {
-    "compile-hero.disable-compile-files-on-did-save-code": false,
-    "compile-hero.scss-output-directory": "../css/",
-    "compile-hero.sass-output-directory": "../css/"
+  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "compile-hero.scss-output-directory": "../css/",
+  "compile-hero.sass-output-directory": "../css/",
+  "editor.formatOnSave": false
 }
